@@ -190,7 +190,7 @@
 
                         <configuration>
                             <environmentVariables>
-                                <PUBLIC_URL>http://www.petrov-grad.ru/</PUBLIC_URL>
+                                <PUBLIC_URL>http://petrov-grad.ru/</PUBLIC_URL>
                                 <REACT_APP_ROUTER_BASE>/</REACT_APP_ROUTER_BASE>
                             </environmentVariables>
                         </configuration>
