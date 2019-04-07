@@ -1,0 +1,15 @@
+.line {
+    border: none;
+}
+
+@media (min-width: 0) {
+    .line.services {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) {
+    .line.services {
+        display: block;
+    }
+}

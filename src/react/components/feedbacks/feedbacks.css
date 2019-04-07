@@ -1,0 +1,16 @@
+.feedback-date {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.01em;
+    color: #979797;
+}
+
+.feedback-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.01em;
+}

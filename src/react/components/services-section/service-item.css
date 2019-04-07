@@ -1,0 +1,23 @@
+img.service-item {
+    margin: 0;
+    width: 80px;
+    height: 80px;
+}
+
+h2.service-item-title {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    font-size: 24px;
+}
+
+.service-item-title {
+    margin-top: 33px;
+}
+
+.service-item-text {
+    font-weight: normal;
+    font-size: 15px;
+}
