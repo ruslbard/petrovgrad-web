@@ -20,4 +20,5 @@ public class PetrovGradWebAppInitializer extends AbstractAnnotationConfigDispatc
         return new String[] { "/" };
     }
 
+
 }
