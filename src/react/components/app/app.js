@@ -12,6 +12,7 @@ import About from "../about/about";
 import RequestForm from "../commons/request-form";
 
 import './app.css';
+import Location from "../location/location";
 
 const appMainConf = {
 
@@ -19,11 +20,13 @@ const appMainConf = {
     logoText: "PetrovGrad",
     phoneText: "+7 (812) 241-14-01",
     email: "petrovgrad.realty@mail.ru",
+    address: {city: "Санкт-Петербург", address: "Моховая, 28"},
     sections: [ {code: "services", label: "Услуги"},
                 {code: "team", label: "Команда"},
                 {code: "cooperation", label: "Сотрудничество"},
                 {code: "offers", label: "Предложения"},
-                {code: "about", label: "О нас"}]
+                {code: "about", label: "О нас"},
+                {code: "location", label: "Контакты"}]
 };
 
 
@@ -75,7 +78,6 @@ class App extends React.Component{
     handleShow = () => {
         this.setState({show: true});
     };
-
     render() {
         return (
             <div className={"app"}>
@@ -87,6 +89,7 @@ class App extends React.Component{
                 <BestOffers offers={ offers } handleShow={ this.handleShow }/>
                 <FeedBacks feedbackData={ feedbackData }/>
                 <About/>
+                <Location x={59.941628} y={30.345575} zoom={17} address={appMainConf.address.address}/>
                 <Footer conf={ appMainConf }/>
                 <RequestForm show={ this.state.show } parent={ this } handleHide={ this.handleHide }/>
             </div>

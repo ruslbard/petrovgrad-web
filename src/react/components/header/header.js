@@ -34,7 +34,7 @@ class Header extends React.Component {
         const menuItems = this.state.conf.sections.map(({code, label}) => {
 
             return (
-                <Nav.Link id={code} href={"#" + code}>{label}</Nav.Link>
+                <Nav.Link className={"menu-item"} id={code} href={"#" + code}>{label}</Nav.Link>
             );
         });
 
@@ -50,8 +50,8 @@ class Header extends React.Component {
                                 onToggle={this.onToggleNav}
                             >
                                 <Navbar.Brand href="#home"><Logo/></Navbar.Brand>
-                                <Navbar.Toggle aria-controls={"petrovgrad-navbar"}/>
-                                <Navbar.Collapse id={"petrovgrad-navbar"} className={"justify-content-end"}>
+                                <Navbar.Toggle aria-controls={"basic-navbar-nav"}/>
+                                <Navbar.Collapse id={"basic-navbar-nav"} className={"justify-content-end"}>
                                     <Nav
                                         className={"mr-0"}
                                         onSelect={this.onSelect}>
