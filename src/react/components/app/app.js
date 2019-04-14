@@ -1,4 +1,5 @@
 import React from 'react';
+import {TinyButton as ScrollToUp} from 'react-scroll-up-button';
 
 import PreHeader from '../pre-header/pre-header';
 import Header from '../header/header';
@@ -92,6 +93,7 @@ class App extends React.Component{
                 <Location x={59.941628} y={30.345575} zoom={14} conf={appMainConf}/>
                 <Footer conf={ appMainConf }/>
                 <RequestForm show={ this.state.show } parent={ this } handleHide={ this.handleHide }/>
+                <ScrollToUp/>
             </div>
         )
     }

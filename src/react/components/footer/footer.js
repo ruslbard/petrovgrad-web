@@ -7,7 +7,7 @@ import './footer.css';
 const Footer = ({conf}) => {
 
     return (
-        <div className={"black-section"}>
+        <div id={"location"} className={"black-section"}>
             <div className={"section footer"}>
                 <Container>
                     <Row>
@@ -38,7 +38,12 @@ const Footer = ({conf}) => {
                             </div>
                             <div className={"other-info"}>
                                 <span>
-                                    График работы: понедельник-пятница 10:00–19:00
+                                    График работы:
+                                </span>
+                            </div>
+                            <div className={"other-info"}>
+                                <span>
+                                    понедельник-пятница 10:00–19:00
                                 </span>
                             </div>
                             <div className={"other-info"}>

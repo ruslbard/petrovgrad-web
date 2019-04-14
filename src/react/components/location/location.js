@@ -6,9 +6,9 @@ import './location.css';
 const Location = ({x, y, zoom, conf}) => {
 
     return (
-        <div id={"location"} className={"location"}>
+        <div className={"location"}>
             <YMaps >
-                <Map defaultState={{center: [x, y], zoom: zoom, behaviors: []}} width={"100%"} height={"100%"}>
+                <Map defaultState={{center: [x, y], zoom: zoom, behaviors: ['drag', 'multiTouch']}} width={"100%"} height={"100%"}>
                     <Placemark geometry={[x, y]} properties={{iconContent: conf.logoText + ' ' + conf.address.address}} options={{preset:'islands#blackStretchyIcon', draggable: false}}/>
                     <ZoomControl />
                 </Map>
