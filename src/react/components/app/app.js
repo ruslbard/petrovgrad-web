@@ -4,6 +4,7 @@ import PreHeader from '../pre-header/pre-header';
 import Header from '../header/header';
 import Services from "../services-section/services";
 import OurTeam from '../our-team/our-team';
+import Cooperation from "../cooperation/cooperation";
 import BestOffers from '../best-offers/best-offers';
 import FeedBacks from '../feedbacks/feedbacks';
 import Footer from '../footer/footer';
@@ -20,6 +21,7 @@ const appMainConf = {
     email: "petrovgrad.realty@mail.ru",
     sections: [ {code: "services", label: "Услуги"},
                 {code: "team", label: "Команда"},
+                {code: "cooperation", label: "Сотрудничество"},
                 {code: "offers", label: "Предложения"},
                 {code: "about", label: "О нас"}]
 };
@@ -81,6 +83,7 @@ class App extends React.Component{
                 <Header conf={ appMainConf } handleShow={ this.handleShow }/>
                 <Services services={services}/>
                 <OurTeam team={ team } handleShow={ this.handleShow }/>
+                <Cooperation handleShow={ this.handleShow } />
                 <BestOffers offers={ offers } handleShow={ this.handleShow }/>
                 <FeedBacks feedbackData={ feedbackData }/>
                 <About/>
