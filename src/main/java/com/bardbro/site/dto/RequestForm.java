@@ -13,7 +13,7 @@ public class RequestForm {
 
     private static final String SMTP_HOST_NAME = "localhost";
     private static final String SMTP_PORT = "25";
-    private static final String FROM = "admin@petrovgrad.ru";
+    private static final String FROM = "admin@petrov-grad.ru";
     private static final String TO = "petrovgrad.realty@mail.ru";
     private static final String THEME = "=== REQUEST FROM PETROV-GRAD.RU ===";
 
