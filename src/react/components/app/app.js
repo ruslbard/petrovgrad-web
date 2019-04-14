@@ -16,8 +16,8 @@ import Location from "../location/location";
 
 const appMainConf = {
 
-    title: "PetrovGrad",
-    logoText: "PetrovGrad",
+    title: "ПетровГрад Недвижимость",
+    logoText: "ПетровГрад",
     phoneText: "+7 (812) 241-14-01",
     email: "petrovgrad.realty@mail.ru",
     address: {city: "Санкт-Петербург", address: "Моховая, 28"},
@@ -89,7 +89,7 @@ class App extends React.Component{
                 <BestOffers offers={ offers } handleShow={ this.handleShow }/>
                 <FeedBacks feedbackData={ feedbackData }/>
                 <About/>
-                <Location x={59.941628} y={30.345575} zoom={17} address={appMainConf.address.address}/>
+                <Location x={59.941628} y={30.345575} zoom={14} conf={appMainConf}/>
                 <Footer conf={ appMainConf }/>
                 <RequestForm show={ this.state.show } parent={ this } handleHide={ this.handleHide }/>
             </div>
