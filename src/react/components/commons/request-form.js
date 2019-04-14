@@ -1,6 +1,5 @@
 import React from 'react';
 import {Modal, Button, Form, Container} from 'react-bootstrap';
-import { notification } from 'antd';
 
 import TitleBlock from "./title-block";
 
@@ -50,11 +49,6 @@ class RequestForm extends React.Component{
             console.log(reason);
 
         }).finally( () => {
-            notification.open({
-                placement: "topLeft",
-                message: "Ваша заявка была отправлена.",
-                description: "Спасибо за ваше обращение. Наши специалисты свяжутся с вами в ближайшее время."
-            });
             this.state.handleHide();
         });
 
