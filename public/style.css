@@ -14,10 +14,18 @@ body{
     font-size: 12px;
 }
 
+h1 {
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 60px;
+    letter-spacing: -0.01em;
+    color: #000000;
+}
+
 @media screen and (min-width: 0px) {
     h1 {
         font-style: normal;
-        font-weight: bolder;
+        font-weight: bold;
         font-size: 42px;
         line-height: 68px;
         letter-spacing: -0.01em;
@@ -25,28 +33,16 @@ body{
     }
 }
 
-@media screen and (min-width: 575px) {
-    h1 {
-        font-style: normal;
-        font-weight: bolder;
-        font-size: 60px;
-        letter-spacing: -0.01em;
-        color: #000000;
-    }
+h2.title {
+    font-size: 50px;
+    line-height: 68px;
+    letter-spacing: -1pt;
+    margin: 0px 0px 5px;
 }
 
 @media screen and (min-width: 0px) {
     h2.title {
         font-size: 36px;
-        line-height: 68px;
-        letter-spacing: -1pt;
-        margin: 0px 0px 5px;
-    }
-}
-
-@media screen and (min-width: 575px) {
-    h2.title {
-        font-size: 50px;
         line-height: 68px;
         letter-spacing: -1pt;
         margin: 0px 0px 5px;

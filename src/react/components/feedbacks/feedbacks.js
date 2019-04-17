@@ -14,19 +14,28 @@ const FeedBacks = ({ feedbackData }) => {
         text: "Ваши положительные эмоции по окончанию сделки — самые важные критерии для нас!"
     };
 
-    const feedbacks = feedbackData.map(({ code, name, date, text }) => {
+    const feedbacks = feedbackData.map(({ code, name, date, link, text }) => {
 
         return (
             <Row className={"pb-3 justify-content-center"}>
                 <Col sm={8}>
                     <Media>
-                        <img
-                            width={75}
-                            height={75}
-                            className="mr-3"
-                            src={require('./photos/' + code + '.svg')}
-                            alt="Generic placeholder"
-                        />
+                        <a href={link}>
+                            {/*<img*/}
+                                {/*width={75}*/}
+                                {/*height={75}*/}
+                                {/*className="mr-3 roundedCircle"*/}
+                                {/*src={require('./photos/' + code + '.svg')}*/}
+                                {/*alt="Generic placeholder"*/}
+                            {/*/>*/}
+                            <Image
+                                className="mr-3"
+                                width={75}
+                                height={75}
+                                src={require('./photos/' + code + '.svg')}
+                                roundedCircle
+                            />
+                        </a>
                         <Media.Body>
                             <h5>{name}</h5>
                             <p className={"feedback-date"}>{date}</p>
@@ -36,8 +45,8 @@ const FeedBacks = ({ feedbackData }) => {
                                     <Line width={88} height={3} align={"left"}/>
                                 </Col>
                                 <Col>
-                                    <div  className={"float-right"}>
-                                    <Image src={require('./images/quotes.svg')}/>
+                                    <div className={"float-right"}>
+                                        <Image src={require('./images/quotes.svg')}/>
                                     </div>
                                 </Col>
                             </Row>
