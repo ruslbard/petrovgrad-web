@@ -29,7 +29,7 @@ class BestOffers extends React.Component {
         const cards = this.state.offers.map(({code, address, living_area, total_area, price}) => {
 
             return(
-                <Col sm={4} xs={12} className={"person-cards"}>
+                <Col sm={4} xs={12} className={"offer-cards"}>
                     <OfferCard code={ code } address={ address } living_area={ living_area } total_area={ total_area } price={ price } handleShow={this.state.handleShow}/>
                 </Col>
             );

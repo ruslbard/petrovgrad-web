@@ -41,12 +41,8 @@
     padding-bottom: 120px;
 }
 
-.menu-item {
-    padding: 10px;
-}
-
 a.nav-link {
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 a:hover {

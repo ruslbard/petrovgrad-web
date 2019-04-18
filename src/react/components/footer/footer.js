@@ -7,7 +7,7 @@ import './footer.css';
 const Footer = ({conf}) => {
 
     return (
-        <div className={"black-section"}>
+        <div id={"location"} className={"black-section"}>
             <div className={"section footer"}>
                 <Container>
                     <Row>
@@ -28,13 +28,31 @@ const Footer = ({conf}) => {
                             <div className={"other-info"}>
                                 <span>{conf.email}</span>
                             </div>
+                            <div className={"other-info"}>
+                                <span>Адрес: { conf.address.city }, { conf.address.address }</span>
+                            </div>
                         </Col>
-                        <Col sm={4} xs={12}>
+                        <Col sm={5} xs={12}>
                             <div className={"other-info"}>
                                 <span>️<i className={"fa fa-copyright"}/> 2019 Петровград недвижимость</span>
                             </div>
+                            <div className={"other-info"}>
+                                <span>
+                                    График работы:
+                                </span>
+                            </div>
+                            <div className={"other-info"}>
+                                <span>
+                                    понедельник-пятница 10:00–19:00
+                                </span>
+                            </div>
+                            <div className={"other-info"}>
+                                <span>
+                                    суббота 11:00–18:00, воскресенье — выходной
+                                </span>
+                            </div>
                         </Col>
-                        <Col sm={4} xs={12}>
+                        <Col sm={3} xs={12}>
                             <div className={"other-info"}>
                                 <span>Пользовательское соглашение</span>
                             </div>

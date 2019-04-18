@@ -1,0 +1,11 @@
+.location {
+    width: 100%;
+    height: 609px;
+}
+
+@media only screen and (max-height: 750px) {
+    .location {
+        width: 100%;
+        height: 400px;
+    }
+}

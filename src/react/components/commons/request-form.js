@@ -18,18 +18,40 @@ class RequestForm extends React.Component{
 
     sendForm = (event) => {
         event.preventDefault();
-        return fetch('http://localhost:8080/petrovgrad-web/sendMail', {
-            method: 'get',
-            headers: {'Content-Type':'application/json'},
-            body: {
-                name: 'ruslbard',
-                email: 'rbardashov@gmail.com',
-                phone: '+79818420468',
+        const form = new FormData(event.currentTarget);
+        const data = JSON.stringify({
+            name: form.get("name"),
+            email: form.get("email"),
+            phone: form.get("phone")
+        });
+        return fetch('/sendRequestFormToEmail', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: data
+        }).then(function(response) {
+
+            if (response.status >= 400) {
+                throw new Error("Bad response from server");
             }
+
+            return response.json();
+
+        }).then(function(result) {
+
+            if (result.result === 'ok') {
+
+                console.log("ok");
+
+            }
+
         }).catch(reason => {
 
-            console.log(reason)
+            console.log(reason);
+
+        }).finally( () => {
+            this.state.handleHide();
         });
+
     };
 
     render () {
@@ -52,13 +74,13 @@ class RequestForm extends React.Component{
                         <TitleBlock title={titleData.title} text={titleData.text} color={"none"}/>
                         <Form onSubmit={ this.sendForm }>
                             <Form.Group controlId="formBasicName">
-                                <Form.Control type="text" placeholder="Ваше имя"/>
+                                <Form.Control name="name" type="text" placeholder="Ваше имя" required />
                             </Form.Group>
                             <Form.Group controlId="formBasicEmail">
-                                <Form.Control type="email" placeholder="Ваш email"/>
+                                <Form.Control name="email" type="email" placeholder="Ваш email" required />
                             </Form.Group>
                             <Form.Group controlId="formBasicPhone">
-                                <Form.Control type="phone" placeholder="Номер телефона"/>
+                                <Form.Control name="phone" type="phone" placeholder="Номер телефона" />
                             </Form.Group>
                             <p>
                                 Нажимая кнопку «Отправить» вы подтверждаете свое согласие на обработку персональных
